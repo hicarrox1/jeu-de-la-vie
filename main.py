@@ -2,20 +2,6 @@ import pyxel
 from collections import deque
 from random import randint
 
-class Cellule():
-
-    def __init__(self, pos_x, pos_y) -> None:
-        
-        self.pos_x = pos_x
-        self.pos_y = pos_y
-    
-    def update(self):
-        pass
-
-    def draw(self):
-        
-        pyxel.rect(self.pos_x, self.pos_y, 1, 1, 0)
-
 
 class App():
 
@@ -24,8 +10,6 @@ class App():
         pyxel.init(100,100, title="jeu de la vie")
 
         self.plateau = [[0 for _ in range(pyxel.height)] for _ in range(pyxel.width)]
-
-        self.cellule = []
 
         self.run = False
         self.speed_tour = 40
